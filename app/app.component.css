@@ -1,3 +1,25 @@
-p {
-  font-family: Lato;
+.unsubscribeContent {
+    border-radius: 10px;
+    border: 1px solid #d6d4d4;
+    background-color: #ffffff;
+    padding: 45px 60px;
+    width: 920px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 25px auto;
+}
+
+.subsInnerContent {
+    font-size: 16px;
+    line-height: 25px;
+}
+.msgTitle {
+    color: #ff3f12;
+    font-size: 36px;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+.subsInnerContent span.msgTxt {
+    font-size: 24px;
+    line-height: 35px;
 }
