@@ -17,10 +17,13 @@ export class AppComponent implements OnInit {
       this.route.queryParams
       .subscribe(params => {
         console.log(params); // {order: "popular"}
-
-        this.email = params.email;
+      if(params.email){
+ this.email = params.email;
         this.unsubscribe();
         console.log(this.email); // popular
+
+      }
+       
       });
   }
 
