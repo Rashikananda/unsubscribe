@@ -24,6 +24,6 @@ export class AppComponent implements OnInit {
   }
 
   unsubscribe() {
-    this.http.post('http://192.168.43.105:9000/unSubcribe/'+this.email, {}).subscribe(a => console.log(a));
+    this.http.post('http://localhost:9000/unSubcribe/'+this.email, {}).subscribe(a => console.log(a));
   }
 }
