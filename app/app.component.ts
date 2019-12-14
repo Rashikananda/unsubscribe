@@ -19,11 +19,13 @@ export class AppComponent implements OnInit {
         console.log(params); // {order: "popular"}
 
         this.email = params.email;
+        this.unsubscribe();
         console.log(this.email); // popular
       });
   }
 
   unsubscribe() {
+    console.log('unsubscribe');
     this.http.post('http://localhost:9000/unSubcribe/'+this.email, {}).subscribe(a => console.log(a));
   }
 }
