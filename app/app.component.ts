@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { HttpClient, HttpParams, HttpHeaders } from "@angular/common/http";
+
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
@@ -8,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class AppComponent implements OnInit {
   name = 'Angular 4';
   email= 'rasikanandapattanaik@gmail.com'
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private http: HttpClient) {
 
   }
     ngOnInit() {
@@ -19,5 +21,9 @@ export class AppComponent implements OnInit {
         this.email = params.email;
         console.log(this.email); // popular
       });
+  }
+
+  unsubscribe() {
+    this.http.post('http://192.168.43.105:9000/unSubcribe/'+this.email, {}).subscribe(a => console.log(a));
   }
 }
